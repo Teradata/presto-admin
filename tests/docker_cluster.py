@@ -77,7 +77,7 @@ class DockerCluster(BaseCluster):
         kwargs = kwargs_from_env()
         if 'tls' in kwargs:
             kwargs['tls'].assert_hostname = False
-        kwargs['timeout'] = 300
+        kwargs['timeout'] = 500
         self.client = Client(**kwargs)
         self._user = 'root'
 
